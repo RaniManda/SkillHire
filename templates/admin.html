@@ -1,0 +1,279 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Chat</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+<h2>Admin Panel</h2>
+<input id="msg" placeholder="Reply to user">
+<button onclick="send()">Send</button>
+<ul id="chat"></ul>
+<script>
+  const socket = io();
+  function send() {
+    const msg = document.getElementById("msg").value;
+    socket.emit("admin_message", msg);
+    document.getElementById("msg").value = "";
+  }
+  socket.on("admin_receive", function(msg) {
+    const li = document.createElement("li");
+    li.textContent = "User: " + msg;
+    document.getElementById("chat").appendChild(li);
+  });
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Chat</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script>
+  const socket = io();
+
+  function send() {
+    const input = document.getElementById("msg");
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    socket.emit("chat_message", {
+      sender: "admin",
+      text: msg
+    });
+
+    input.value = "";
+  }
+
+  socket.on("chat_message", function(data) {
+    if (data.sender === "admin") {
+      addMessage(data.text, "admin");
+    } else {
+      addMessage(data.text, "user");
+    }
+  });
+
+  function addMessage(text, type) {
+    const li = document.createElement("li");
+    li.className = "message " + type;
+    li.textContent = text;
+    document.getElementById("chat").appendChild(li);
+    li.scrollIntoView();
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ece5dd;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background: #128c7e;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #chat {
+      flex: 1;
+      list-style: none;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .message {
+      max-width: 60%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      clear: both;
+    }
+
+    .user {
+      background: #fff;
+      float: left;
+    }
+
+    .admin {
+      background: #dcf8c6;
+      float: right;
+      text-align: right;
+    }
+
+    footer {
+      display: flex;
+      padding: 10px;
+      background: #f0f0f0;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      border: none;
+      background: #128c7e;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>SkillHire – Admin Panel</header>
+
+<ul id="chat"></ul>
+
+<footer>
+  <input id="msg" placeholder="Reply to user..." />
+  <button onclick="send()">➤</button>
+</footer>
+
+<script>
+  const socket = io();
+
+  function send() {
+    const input = document.getElementById("msg");
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    addMessage(msg, "admin");
+    socket.emit("admin_message", msg);
+    input.value = "";
+  }
+
+  socket.on("admin_receive", function(msg) {
+    addMessage(msg, "user");
+  });
+
+  function addMessage(text, type) {
+    const li = document.createElement("li");
+    li.className = "message " + type;
+    li.textContent = text;
+    document.getElementById("chat").appendChild(li);
+    li.scrollIntoView();
+  }
+</script>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Chat</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ece5dd;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #128c7e;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-size: 18px;
+    }
+    #chat {
+      flex: 1;
+      list-style: none;
+      padding: 15px;
+      overflow-y: auto;
+    }
+    .message {
+      max-width: 60%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      clear: both;
+    }
+    .user { background: #fff; float: left; }
+    .admin { background: #dcf8c6; float: right; text-align: right; }
+
+    footer {
+      display: flex;
+      padding: 10px;
+      background: #f0f0f0;
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      background: #128c7e;
+      color: white;
+      border: none;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+<header>SkillHire – Admin Panel</header>
+
+<ul id="chat"></ul>
+
+<footer>
+  <input id="msg" placeholder="Reply to user..." />
+  <button onclick="send()">➤</button>
+</footer>
+
+<script>
+  const socket = io();
+
+  function send() {
+    const msg = msgInput.value.trim();
+    if (!msg) return;
+
+    socket.emit("chat_message", {
+      sender: "admin",
+      text: msg
+    });
+
+    msgInput.value = "";
+  }
+
+  const msgInput = document.getElementById("msg");
+
+  socket.on("chat_message", function(data) {
+    addMessage(data.text, data.sender);
+  });
+
+  function addMessage(text, sender) {
+    const li = document.createElement("li");
+    li.className = "message " + sender;
+    li.textContent = text;
+    chat.appendChild(li);
+    li.scrollIntoView();
+  }
+
+  const chat = document.getElementById("chat");
+</script>
+
+</body>
+</html>
