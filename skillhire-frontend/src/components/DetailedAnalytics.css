@@ -1,0 +1,56 @@
+.detailed-analytics {
+  margin-top: 30px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.analytics-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.strengths-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.strengths-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.strengths-list li.strong span:last-child {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.strengths-list li.average span:last-child {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.strengths-list li.weak span:last-child {
+  color: #ef4444;
+  font-weight: 500;
+}

@@ -1,0 +1,84 @@
+/* MAIN CONTAINER */
+.analytics-container {
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.analytics-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.analytics-header p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* DIVIDER */
+.analytics-divider {
+  margin: 18px 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* GRID */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* INNER CARDS */
+.analytics-box {
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.analytics-box:hover {
+  background: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+}
+
+.analytics-box h4 {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* STRENGTH LIST */
+.strength {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.strength:last-child {
+  border-bottom: none;
+}
+
+.strength.strong span:last-child {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.strength.average span:last-child {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.strength.weak span:last-child {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+

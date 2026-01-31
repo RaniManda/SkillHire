@@ -1,0 +1,89 @@
+.skill-score-panel {
+  position: relative;
+  background: blue;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-score-panel:hover {
+  box-shadow: 0 12px 28px white;
+}
+
+/* Top-left badge */
+.panel-badge {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f1f3f8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(37, 99, 235, 0.1);
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Main horizontal line */
+.readiness-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.readiness-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f3f4f8;
+}
+
+.readiness-bar {
+  width: 100%;
+  height: 18px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.readiness-bar-fill {
+  height: 100%;
+  background: #25eb35;
+  border-radius: 12px;
+  transition: width 1s ease;
+}
+
+/* Move "Almost Job Ready" below the line */
+.readiness-label {
+  font-size: 0.95rem;
+  color: #e9ecf1;
+  font-weight: 500;
+  text-align: right; /* optional, aligns right like image */
+  margin-top: 6px;
+}
+
+/* Expanded metrics */
+.expanded-metrics {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #dadfe6;
+}
+
+
+
+
+

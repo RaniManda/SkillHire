@@ -1,0 +1,16 @@
+.interview-analytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.analytics-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.analytics-box ul {
+  margin-top: 10px;
+  line-height: 1.8;
+}
