@@ -35,3 +35,7 @@ build/
 # misc
 *.sqlite3
 *.egg-info/
+
+# Ignore compiled files
+*.pyc
+__pycache__/
