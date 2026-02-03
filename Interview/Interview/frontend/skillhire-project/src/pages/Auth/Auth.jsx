@@ -745,8 +745,12 @@ import { loginApi, registerApi, sendOtpApi, verifyOtpApi, resetPasswordApi } fro
 
 const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
 
-const Auth = ({ onClose, onLoginSuccess }) => {
-  const [page, setPage] = useState("login");
+const Auth = ({ onClose, onLoginSuccess, initialPage = 'login' }) => {
+  const [page, setPage] = useState(initialPage);
+
+  useEffect(() => {
+    setPage(initialPage);
+  }, [initialPage]);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -787,8 +791,15 @@ const Auth = ({ onClose, onLoginSuccess }) => {
   }, [onLoginSuccess]);
 
   const handleSocialLogin = (provider) => {
-    // Redirect to home page where App.jsx will handle OAuth callback and redirect to dashboard
-    const nextUrl = window.location.origin + '/';
+    // Default: after social login redirect to student dashboard
+    let nextUrl = window.location.origin + '/student/dashboard';
+
+    // If feedback intent persisted (user clicked Give Feedback), redirect to home
+    // and let App.jsx open the feedback modal after OAuth completes
+    if (localStorage.getItem('feedbackIntent')) {
+      nextUrl = window.location.origin + '/';
+    }
+
     window.location.href = `${BACKEND_BASE_URL}/auth/oauth/${provider}/?role=${socialRole}&next=${encodeURIComponent(nextUrl)}`;
   };
 

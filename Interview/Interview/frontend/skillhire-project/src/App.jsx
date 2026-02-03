@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -57,6 +58,14 @@ function App() {
       };
       setUser(userData);
       localStorage.setItem('user', JSON.stringify(userData));
+
+      // If user intended to give feedback before OAuth, open feedback after login
+      if (localStorage.getItem('feedbackIntent')) {
+        setPreventRedirect(true);
+        setShowFeedback(true);
+        localStorage.removeItem('feedbackIntent');
+      }
+
       // Clean URL and redirect will happen automatically via Navigate component
       window.history.replaceState({}, document.title, window.location.pathname);
     } else if (oauthStatus === 'error') {
@@ -93,7 +102,11 @@ function App() {
 
   const handleAuth = (mode, intent) => {
     setAuthMode(mode);
-    if (intent === 'feedback') setFeedbackIntent(true);
+    if (intent === 'feedback') {
+      setFeedbackIntent(true);
+      // persist intent across full-page OAuth redirects
+      localStorage.setItem('feedbackIntent', '1');
+    }
     setShowAuth(true);
   };
 
