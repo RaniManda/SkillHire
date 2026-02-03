@@ -1,0 +1,2 @@
+- [x] Update register_view in views.py to use CustomUserCreationForm
+- [x] Add email input field to register.html template

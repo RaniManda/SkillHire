@@ -1,0 +1,50 @@
+.interview-analytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.analytics-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.analytics-box ul {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+.interview-analytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+/* ANALYTICS CARD */
+.analytics-box {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+}
+
+/* HOVER EFFECT */
+.analytics-box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 36px rgba(0, 89, 177, 0.35);
+}
+
+.analytics-box h4 {
+  margin-bottom: 12px;
+}
+
+.analytics-box ul {
+  margin-top: 10px;
+  line-height: 1.9;
+}
+
+.analytics-box b {
+  color: rgb(0, 89, 177);
+}

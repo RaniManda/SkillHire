@@ -1,0 +1,33 @@
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.stat-card .icon {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+
+/* .stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.stat-card p {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.stat-card span {
+  font-size: 0.85rem;
+  color: gray;
+}
+ */
+
+ 

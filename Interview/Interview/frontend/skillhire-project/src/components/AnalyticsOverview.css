@@ -1,0 +1,202 @@
+/* MAIN CONTAINER */
+.analytics-container {
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.analytics-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.analytics-header p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* DIVIDER */
+.analytics-divider {
+  margin: 22px 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* GRID */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* CARDS */
+.analytics-box {
+  position: relative;
+  background: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Hover zoom and subtle shadow */
+.analytics-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15); /* neutral shadow */
+}
+
+/* Optional gradient border for cards — now neutral */
+.analytics-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  padding: 2px;
+  background: linear-gradient(135deg, #f3f4f5, #e5e7eb, #f9fafb); /* neutral tones */
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* CARD HEADINGS */
+.analytics-box h4 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* STRENGTH LIST */
+.strength {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.strength:last-child {
+  border-bottom: none;
+}
+
+.strength.strong span:last-child {
+  color: #6b7280; /* neutral gray */
+  font-weight: 600;
+}
+
+.strength.average span:last-child {
+  color: #d97706; /* amber/orange */
+  font-weight: 600;
+}
+
+.strength.weak span:last-child {
+  color: #b91c1c; /* red for weak items */
+  font-weight: 600;
+}
+
+/* Chart placeholders */
+.chart-placeholder {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+/* CARDS */
+.analytics-box {
+  position: relative;
+  background: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05); /* neutral shadow by default */
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Hover zoom + blue shadow effect */
+.analytics-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px #0059B1 /* soft blue glow */
+
+}
+.analytics-title-animated {
+  background: linear-gradient(
+    270deg,
+    #2563eb,
+    #9333ea,
+    #f59e0b,
+    #10b981,
+    #2563eb
+  );
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  animation: gradientTextMove 5s ease infinite;
+  display: inline-block;
+}
+
+/* Smooth flowing color animation */
+@keyframes gradientTextMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* MAIN CONTAINER */
+.analytics-container {
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Zoom entire Analytics Overview on hover */
+.analytics-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 18px 45px rgba(0, 89, 177, 0.25); /* blue glow */
+}
+/* MAIN CONTAINER */
+.analytics-container {
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+
+  /* default shadow */
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+
+  /* smooth animation */
+  transition: 
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Hover: zoom + blue shadow */
+.analytics-container:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 20px 50px rgba(0, 89, 177, 0.35),
+    0 0 0 1px rgba(0, 89, 177, 0.15);
+}
+

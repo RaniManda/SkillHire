@@ -1,0 +1,290 @@
+/* ASINI */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  height: 80px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Brand Logo Styling */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-symbol {
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+}
+
+.logo-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+/* Menu Links Styling */
+.nav-menu {
+  display: flex;
+  gap: 35px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+/* Action Buttons Styling */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-switcher {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  padding: 8px;
+  display: flex;
+  transition: transform 0.2s;
+}
+
+.theme-switcher:hover {
+  transform: scale(1.1);
+  color: #2563eb;
+}
+
+.btn-login {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 100px; /* Exact pill shape from image */
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-login:hover {
+  background: #1d4ed8;
+}
+
+.btn-register {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
+  padding: 10px 24px;
+  border-radius: 100px; /* Exact pill shape from image */
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-register:hover {
+  background: #f0f7ff;
+}
+
+/* Dark Mode Overrides */
+.dark-mode .navbar-container {
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .logo-name { color: #ffffff; }
+.dark-mode .nav-link { color: #94a3b8; }
+.dark-mode .nav-link:hover { color: #3b82f6; }
+.dark-mode .btn-register { background: transparent; }
+.theme-toggle {
+  width: 46px;
+  height: 24px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle.active {
+  background: #0f172a; /* yellow */
+}
+
+.toggle-knob {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle.active .toggle-knob {
+  transform: translateX(22px);
+}
+/* JOIN NOW – Primary Filled Button */
+.btn-register {
+  background: #2563eb;           /* Primary Blue */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn-register:hover {
+  background: #1d4ed8;           /* Darker Blue */
+  transform: scale(1.06);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.45);
+}
+
+.btn-register:active {
+  transform: scale(0.98);
+}
+/* LOGIN BUTTON – Animated Outline */
+.btn-login {
+  background: transparent;
+  color: #2563eb;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 2px solid #2563eb;
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-login:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+}
+/* LOGIN BUTTON – Filled */
+.btn-login {
+  background: #e0ecff;          /* Soft Blue Background */
+  color: #2563eb;               /* Primary Blue Text */
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn-login:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.35);
+}
+
+.btn-login:active {
+  transform: scale(0.97);
+}
+.btn-register {
+  background: #e0ecff;          /* Soft Blue Background */
+  color: #2563eb;               /* Primary Blue Text */
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn-register:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: scale(1.06);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
+}
+
+/* 30/01/2026 */
+
+/* =========================
+  THEME TOGGLE (SUN / MOON)
+   ========================= */
+
+.theme-toggle {
+  width: 58px;
+  height: 30px;
+  padding: 4px;
+  border-radius: 50px;
+   background-color: #fbbf24; /* golden orange */ 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+/* Dark mode background */
+.theme-toggle.active {
+  background: linear-gradient(135deg, #1f2933, #111827);
+}
+
+/* Toggle knob */
+.toggle-knob {
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fb4b06; /* Sun color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateX(0);
+  transition: transform 0.4s ease, color 0.4s ease, background 0.4s ease;
+}
+
+/* Move knob + change icon color in dark mode */
+.theme-toggle.active .toggle-knob {
+  transform: translateX(28px);
+  background: #ffffff;
+  color: #151414; /* Moon color */
+}
