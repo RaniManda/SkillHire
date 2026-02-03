@@ -1,0 +1,130 @@
+.skill-score-panel {
+  position: relative;
+  background: #f1f2f3;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-score-panel:hover {
+  box-shadow: 0 12px 28px rgb(0, 89, 177);
+}
+
+/* Top-left badge */
+.panel-badge {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #00040e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(37, 99, 235, 0.1);
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* Main horizontal line */
+.readiness-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.readiness-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00040e;
+}
+
+.readiness-bar {
+  width: 100%;
+  height: 18px;
+  background:#c3c9d0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.readiness-bar-fill {
+  height: 100%;
+  background: #c3c9d0;
+  border-radius: 12px;
+  transition: width 1s ease;
+}
+
+/* Move "Almost Job Ready" below the line */
+.readiness-label {
+  font-size: 0.95rem;
+  color: #00040e;
+  font-weight: 500;
+  text-align: right; /* optional, aligns right like image */
+  margin-top: 6px;
+}
+
+/* Expanded metrics */
+.expanded-metrics {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 15px;
+  border-top: 1px solid #00040e;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #00040e;
+}
+/* 31 */
+.skill-score-panel {
+  position: relative;
+  background: linear-gradient(135deg, #f7f8fa, #fefeff);
+  padding: 26px 30px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  cursor: pointer;
+
+  /* animation setup */
+  opacity: 0;
+  transform: scale(0.85) translateY(40px);
+  transition: 
+    transform 0.6s ease,
+    opacity 0.6s ease,
+    box-shadow 0.4s ease;
+}
+
+/* When visible */
+.skill-score-panel.zoom-in {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Hover zoom + colored shadow */
+.skill-score-panel:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 20px 40px rgba(37, 99, 235, 0.45),
+    0 0 25px rgba(59, 130, 246, 0.6);
+}
+.readiness-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1f7de9, #1f7de9);
+  border-radius: 12px;
+  transition: width 1.2s ease-in-out;
+}
+/* as */
+.skill-score-panel {
+  background: linear-gradient(135deg, #fbfcfd, #fcfeff);
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 0 2px rgb(0, 89, 177) 
+}
+

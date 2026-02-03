@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.env
+.env*
+.venv/
+venv/
+ENV/
+venv/**
+# Django
+*.log
+db.sqlite3
+/staticfiles/
+/media/
+
+# Node
+node_modules/
+/dist
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local env
+backend/django-auth-project-main/.env
+backend/django-auth-project-main/venv/
+
+# build
+build/
+
+# misc
+*.sqlite3
+*.egg-info/

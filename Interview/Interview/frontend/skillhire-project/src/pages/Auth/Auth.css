@@ -1,0 +1,206 @@
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg,#7f7cff,#b67cff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ADD THIS */
+.auth-lottie {
+  width: 80%;
+  height: 320px;   /* 👈 REQUIRED */
+}
+
+.auth-box {
+  width: 900px;
+  height: 600px;
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+/* LEFT */
+.auth-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fb;
+}
+
+
+.auth-left img {
+  width: 80%;
+}
+
+/* RIGHT */
+.auth-right {
+  flex: 1;
+  padding: 40px;
+  position: relative;
+}
+
+.close-x {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.password-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.role-buttons button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #6c63ff;
+  background: white;
+  cursor: pointer;
+}
+
+.role-buttons button.active {
+  background: #6c63ff;
+  color: white;
+  border-color: #6c63ff;
+}
+
+.social-role-buttons {
+  margin-bottom: 12px;
+}
+
+.link {
+  margin-top: 15px;
+  color: #6c63ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+}
+.social-login {
+  margin-top: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #fff;
+  font-size: 15px;
+}
+
+.google-btn {
+  border-color: #db4437;
+  color: #db4437;
+}
+
+.google-btn:hover {
+  background: #db4437;
+  color: #fff;
+}
+
+.linkedin-btn {
+  border-color: #0077b5;
+  color: #0077b5;
+}
+
+.linkedin-btn:hover {
+  background: #0077b5;
+  color: #fff;
+}
+/* Container for flipping */
+.register-form {
+  perspective: 1000px; /* Enable 3D space for child elements */
+}
+
+/* Inner form card that flips */
+.register-form-inner {
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* Front and back faces */
+.register-front,
+.register-back {
+  backface-visibility: hidden; /* Hide back face when flipped */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Back face rotated 180deg */
+.register-back {
+  transform: rotateY(180deg);
+}
+
+/* Flip active state */
+.flip-to-back .register-form-inner {
+  transform: rotateY(180deg);
+}
